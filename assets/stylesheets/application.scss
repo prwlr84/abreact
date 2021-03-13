@@ -1,4 +1,36 @@
-.app {
-  margin-top: 20px;
-  margin-bottom: 20px;
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap");
+
+#root {
+  margin: 0;
+  padding: 0;
 }
+
+div.app {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: black;
+  color: red;
+  font-family: "Orbitron", sans-sherif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1{
+  font-family: "Orbitron", sans-sherif;
+}
+
+// @media only screen and (max-width: 576px) {
+//   h1{
+//     font-size: 72px;
+//   }
+
+// }
+
+div.main {
+  h3,h4{
+    margin: 0 auto;
+  }
+}
+
