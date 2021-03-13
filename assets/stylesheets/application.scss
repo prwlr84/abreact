@@ -29,8 +29,21 @@ h1{
 // }
 
 div.main {
-  h3,h4{
-    margin: 0 auto;
+  margin: 0 auto;
+
+  input{
+    background-color: black;
+    color: red;
+    border: none;
+  }
+
+  input:focus{
+    outline: none;
+  }
+
+  button {
+    border: 1px solid red;
+    background-color: black;
   }
 }
 
