@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap');
+
+div.app{
+  h1{
+    font-family: 'Mrs Saint Delafield', cursive;
+    font-size: 72px;
+  }
+
+  padding: 50px;
+  position: relative;
+
+  h2.button0{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  h2.button2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  h2.button3{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+div.about {
+
+
+  display: flex;
+  font-family: "Orbitron", sans-sherif;
+  color: red;
+  padding: 50px;
+  background-color: black;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  position: relative;
+
+  h2.button0{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  h2.button2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  h2.button3{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  img, video {
+    border-radius: 5px;
+  }
+
+  div.frame1{
+    width: fit-content;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(255, 0, 0, 0.8);
+    border-radius: 5px;
+  }
+
+  div.frame2{
+    border: 2px solid rgba(255,0,0,1);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
+    padding: 0;
+  }
+
+  div.frame3{
+    width: fit-content;
+    margin: 20px;
+    padding: 40px;
+    background: rgb(255,0,0);
+    background: linear-gradient(145deg, rgba(255,0,0,0.4) 9%, rgba(0,0,0,1) 62%);
+    border-radius: 5px;
+  }
+
+
+}
