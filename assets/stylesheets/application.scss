@@ -29,12 +29,13 @@ h1{
 // }
 
 div.main {
-  margin: 0 auto;
+  margin: auto auto;
 
   input{
     background-color: black;
     color: red;
     border: none;
+    font-size: 36px;
   }
 
   input:focus{
