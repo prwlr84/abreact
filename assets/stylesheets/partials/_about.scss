@@ -1,28 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap');
 
 div.app{
-  h1{
+  h1.about-title{
     font-family: 'Mrs Saint Delafield', cursive;
     font-size: 72px;
+    height: fit-content;
   }
 
   padding: 50px;
   position: relative;
 
   h2.button0{
-    position: absolute;
+    margin: 0;
+    position: fixed;
     top: 0;
     left: 0;
   }
 
   h2.button2{
-    position: absolute;
+    margin: 0;
+    position: fixed;
     bottom: 0;
     left: 0;
   }
 
   h2.button3{
-    position: absolute;
+    margin: 0;
+    position: fixed;
     bottom: 0;
     right: 0;
   }
@@ -30,15 +34,18 @@ div.app{
 
 div.about {
 
-
+  margin-top: 10%;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   font-family: "Orbitron", sans-sherif;
   color: red;
-  padding: 50px;
   background-color: black;
   overflow-x: hidden;
   flex-wrap: wrap;
-  position: relative;
+  position: absolute;
+  width: 100%;
 
   h2.button0{
     position: absolute;
@@ -80,12 +87,109 @@ div.about {
 
   div.frame3{
     width: fit-content;
+    height: fit-content;
     margin: 20px;
-    padding: 40px;
+    padding: 3px;
     background: rgb(255,0,0);
-    background: linear-gradient(145deg, rgba(255,0,0,0.4) 9%, rgba(0,0,0,1) 62%);
+    background: linear-gradient(145deg, rgba(0,0,0,1) 42%, rgba(255,0,0,0.9) 82%);
     border-radius: 5px;
   }
 
+  @media only screen and (min-width: 1110px){
+    div.about1{
+      position: relative;
+      min-height: 50vh;
+      width:100%;
 
+      div.frame3:nth-of-type(2){
+        position: absolute;
+        left: 25%;
+        top: 0;
+      }
+
+      div.frame3:nth-of-type(3){
+        position: absolute;
+        left: 12%;
+        top: 10%;
+      }
+
+
+      div.about-text1{
+        position: absolute;
+        right: 12%;
+        top: 30%;
+        max-width: 35vw;
+      }
+
+    }
+
+    div.about2{
+      position: relative;
+      min-height: 50vh;
+      width:100%;
+
+      div.frame3:nth-of-type(1){
+        position: absolute;
+        left: 12%;
+        bottom: 0;
+      }
+
+      div.frame3:nth-of-type(3){
+        position: absolute;
+        right: 12%;
+        top: 0;
+      }
+
+      div.about-text2{
+        position: absolute;
+        left: 30%;
+        top: 50%;
+        max-width: 35vw;
+      }
+    }
+
+    div.about3{
+      position: relative;
+      min-height: 50vh;
+      width:100%;
+
+      div.frame3:nth-of-type(2){
+        position: absolute;
+        right: 25%;
+        top: 0;
+
+      }
+
+      div.frame3:nth-of-type(3){
+        position: absolute;
+        right: 12%;
+        top: 10%;
+      }
+
+      div.frame3:nth-of-type(4){
+        position: absolute;
+        right: 38%;
+        top: 30%;
+      }
+
+      div.about-text3{
+        position: absolute;
+        left: 12%;
+        top: 25%;
+        max-width: 35vw;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  img, video {
+    width: 15vw;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  img, video {
+    width: 44vw;
+  }
 }
