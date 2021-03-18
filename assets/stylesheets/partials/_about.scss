@@ -89,8 +89,10 @@ div.about {
     margin: 20px;
     padding: 3px;
     background: rgb(0,0,0);
-    background: linear-gradient(146deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 42%, rgba(255,0,0,1) 82%);
+    background: linear-gradient(125deg, rgba(0, 0, 0, 0) 40%, black 72%, red 92%);
     border-radius: 5px;
+    overflow: visible;
+    position: relative;
   }
 
   @media only screen and (min-width: 576px){
@@ -264,28 +266,28 @@ div.about {
     }
 }
 
-//https://res.cloudinary.com/prwlr84/image/upload/v1615874393/resized-image-Promo_1_s9hky3.jpg
-//https://res.cloudinary.com/prwlr84/image/upload/v1615874393/IMG_20210102_153256_wfwk3u.jpg
+
 /* Glitch styles */
 .glitchH {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
-  width: 15vh;
-  height: 20vh;
+  width: 16vw;
+  height: 25vw;
   overflow: hidden;
 }
 
 .glitchL {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
-  width: 20vh;
+  width: 15vw;
   height: 15vh;
   overflow: hidden;
 }
 
 .glitch-img1 {
+  border-radius: 5px;
   position: absolute;
   top: 5px;
   left: 10px;
@@ -299,6 +301,7 @@ div.about {
 }
 
 .glitch-img2 {
+  border-radius: 5px;
   position: absolute;
   top: 5px;
   left: 10px;
@@ -310,6 +313,63 @@ div.about {
   transform: translate3d(0,0,0);
   background-blend-mode: none;
 }
+
+.glitch-img3 {
+  border-radius: 5px;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: calc(100% + 10px * 2);
+  height: calc(100% + 5px * 2);
+  background: url(https://res.cloudinary.com/prwlr84/image/upload/v1615874393/IMG_20190908_224113_zrth35.jpg) no-repeat 50% 0;
+  background-color: transparent;
+  background-size: cover;
+  transform: translate3d(0,0,0);
+  background-blend-mode: none;
+}
+
+.glitch-img4 {
+  border-radius: 5px;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: calc(100% + 10px * 2);
+  height: calc(100% + 5px * 2);
+  background: url(https://res.cloudinary.com/prwlr84/image/upload/v1615874393/IMG_20181010_085053_owroqb.jpg) no-repeat 50% 0;
+  background-color: transparent;
+  background-size: cover;
+  transform: translate3d(0,0,0);
+  background-blend-mode: none;
+}
+
+.glitch-img5 {
+  border-radius: 5px;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: calc(100% + 10px * 2);
+  height: calc(100% + 5px * 2);
+  background: url(https://res.cloudinary.com/prwlr84/image/upload/v1615874393/resized-image-Promo_fg0i43.jpg) no-repeat 50% 0;
+  background-color: transparent;
+  background-size: cover;
+  transform: translate3d(0,0,0);
+  background-blend-mode: none;
+}
+
+.glitch-img6 {
+  border-radius: 5px;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: calc(100% + 10px * 2);
+  height: calc(100% + 5px * 2);
+  background: url(https://res.cloudinary.com/prwlr84/image/upload/v1607610545/f67fwf2e07stxitmpmfv0gfu3ui8.jpg) no-repeat 50% 0;
+  background-color: transparent;
+  background-size: cover;
+  transform: translate3d(0,0,0);
+  background-blend-mode: none;
+}
+
 
 .glitchH *:nth-child(n+2) {
   opacity: 0;
@@ -339,8 +399,8 @@ div.about {
 }
 
 .glitchL *:nth-child(n+2) {
-  animation-duration: 4s;
-  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-delay: 4s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }

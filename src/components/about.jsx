@@ -16,12 +16,44 @@ class About extends Component {
                   Looking for new opportunities in Web Development, with experience in React JS, Ruby on Rails, AJAX, relational and non-relational databases and more. Absolutely open for new languages with excellent capacity to retain new things.
                 </h4>
               </div>
-              <div className="frame3"><img src="https://res.cloudinary.com/prwlr84/image/upload/v1615874393/resized-image-Promo_fg0i43.jpg" alt="Photo in a suit" /></div>
-              <div className="frame3"><img src="https://res.cloudinary.com/prwlr84/image/upload/v1607610545/f67fwf2e07stxitmpmfv0gfu3ui8.jpg" alt="Sunny casual photo" /></div>
+              <div className="frame3">
+                <div class="glitchL">
+                  <div class="glitch-img5"></div>
+                  <div class="glitch-img5"></div>
+                  <div class="glitch-img5"></div>
+                  <div class="glitch-img5"></div>
+                  <div class="glitch-img5"></div>
+                </div>
+              </div>
+              <div className="frame3">
+                <div class="glitchH">
+                  <div class="glitch-img6"></div>
+                  <div class="glitch-img6"></div>
+                  <div class="glitch-img6"></div>
+                  <div class="glitch-img6"></div>
+                  <div class="glitch-img6"></div>
+                </div>
+              </div>
             </div>
             <div className="about2">
-              <div className="frame3"><img src="https://res.cloudinary.com/prwlr84/image/upload/v1615874393/IMG_20190908_224113_zrth35.jpg" alt="Budapest" /></div>
-              <div className="frame3"><img src="https://res.cloudinary.com/prwlr84/image/upload/v1615874393/IMG_20181010_085053_owroqb.jpg" alt="Amsterdam" /></div>
+              <div className="frame3">
+                <div class="glitchL">
+                  <div class="glitch-img3"></div>
+                  <div class="glitch-img3"></div>
+                  <div class="glitch-img3"></div>
+                  <div class="glitch-img3"></div>
+                  <div class="glitch-img3"></div>
+                </div>
+              </div>
+              <div className="frame3">
+                <div class="glitchL">
+                  <div class="glitch-img4"></div>
+                  <div class="glitch-img4"></div>
+                  <div class="glitch-img4"></div>
+                  <div class="glitch-img4"></div>
+                  <div class="glitch-img4"></div>
+                </div>
+              </div>
               <div className="about-text2">
                 <h4>I was born in a town in the middle of the Hungarian lowlands, then I moved to Budapest for my studies and I lived there for 10 years.<br/> Next stop was the evenly
                 flat Amsterdam and currently moved to Spain to try a bit more "elevated" lifestyle in the mountains.</h4>
