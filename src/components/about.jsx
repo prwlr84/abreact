@@ -1,6 +1,55 @@
 import React, { Component } from 'react';
+import Typed from 'typed.js';
 
 class About extends Component {
+  componentDidMount(){
+    window.addEventListener('click', e => {
+      switch(e.target){
+        case document.querySelector('.button0'):
+        document.location.href = '/';
+        break;
+        case document.querySelector('.button2'):
+        document.location.href = '/work';
+        break;
+        case document.querySelector('.button3'):
+        document.location.href = '/connect';
+        break;
+        case document.querySelector('.button0-mob'):
+        document.location.href = '/';
+        break;
+        case document.querySelector('.button2-mob'):
+        document.location.href = '/work';
+        break;
+        case document.querySelector('.button3-mob'):
+        document.location.href = '/connect';
+        break;
+      default:
+        return null;
+      }
+    });
+
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function buttonTyper(string,element){
+      let word = '';
+      for (var i = 0; i < string.length; i++) {
+        word = word + string[i];
+        element.innerHTML = word;
+        await sleep(50);
+      }
+    };
+
+
+    document.querySelector('.button0').addEventListener('mouseover', ()=> {buttonTyper('0|HOME', document.querySelector('.button0') )});
+    document.querySelector('.button0').addEventListener('mouseout', ()=> {document.querySelector('.button0').innerHTML = '0'});
+    document.querySelector('.button2').addEventListener('mouseover', ()=> {buttonTyper('2|WORK', document.querySelector('.button2') )});
+    document.querySelector('.button2').addEventListener('mouseout', ()=> {document.querySelector('.button2').innerHTML = '2'});
+    document.querySelector('.button3').addEventListener('mouseover', ()=> {buttonTyper('3|CONNECT', document.querySelector('.button3') )});
+    document.querySelector('.button3').addEventListener('mouseout', ()=> {document.querySelector('.button3').innerHTML = '3'});
+  }
+
   render(){
     return(
       <div className="app">
