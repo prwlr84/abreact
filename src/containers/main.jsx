@@ -13,7 +13,7 @@ class Main extends Component {
     window.addEventListener("keydown", e => {
       switch(e.keyCode){
         case 49:
-        document.location.href = 'http://google.com';
+        document.location.href = '/about';
         break;
         case 50:
         document.location.href = '/work';

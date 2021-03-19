@@ -18,7 +18,7 @@ const initialState = {
   //ip: JSON.parse(app.dataset.ip),
   //ip: '5.38.128.0',
   //ip: '170.253.46.238',
-  ip: '2.16.91.255',
+  ip: '2.16.8.255',
   lang: ""
 }
 const reducers = combineReducers({
