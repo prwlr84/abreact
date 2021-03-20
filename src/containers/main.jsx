@@ -10,21 +10,29 @@ class Main extends Component {
 
 
   componentDidMount(){
-    window.addEventListener("keydown", e => {
-      switch(e.keyCode){
+    async function redirect(keycode){
+      switch(keycode){
         case 49:
+        document.querySelector('.chBox').click();
+        await new Promise(r => setTimeout(r, 1000));
         document.location.href = '/about';
         break;
         case 50:
+        document.querySelector('.chBox').click()
+        await new Promise(r => setTimeout(r, 1000));
         document.location.href = '/work';
         break;
         case 51:
+        document.querySelector('.chBox').click()
+        await new Promise(r => setTimeout(r, 1000));
         document.location.href = '/connect';
         break;
       default:
         return null;
       }
-    });
+    }
+
+    window.addEventListener("keydown", e => {redirect(e.keyCode), false});
 
     window.addEventListener('click', e => {
       switch(e.target){
@@ -48,9 +56,11 @@ class Main extends Component {
 
   render() {
     return (
-      <div className="app row">
-        <div className="main col-12 col-sm-6">
-          { this.props.lang ? <Menu /> : <h1>Loading...</h1> }
+      <div><input className="chBox" type="checkbox"  />
+        <div className="app row screen">
+          <div className="main col-12 col-sm-6">
+            { this.props.lang ? <Menu /> : <h1>Loading...</h1> }
+          </div>
         </div>
       </div>
     );

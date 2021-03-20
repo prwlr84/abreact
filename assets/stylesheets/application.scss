@@ -8,7 +8,7 @@ body {
   height: 100%;
 }
 
-body::-webkit-scrollbar {
+* ::-webkit-scrollbar {
   display: none;
 }
 div.app::-webkit-scrollbar, div.about::-webkit-scrollbar {
@@ -16,6 +16,7 @@ div.app::-webkit-scrollbar, div.about::-webkit-scrollbar {
 }
 
 #root {
+  background-color: black;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -73,3 +74,39 @@ div.main {
   }
 }
 
+$ease-out-quint:cubic-bezier(0.230, 1.000, 0.320, 1.000);
+$ease-in-quint:cubic-bezier(0.755, 0.050, 0.855, 0.060);
+
+@keyframes turn-off{
+  0%{
+    transform:scale(1,1.3) translate3d(0,0,0);
+    -webkit-filter:brightness(1);
+    filter:brightness(1);
+    opacity:1;
+  }
+  60%{
+    transform:scale(1.3,0.001) translate3d(0,0,0);
+    -webkit-filter:brightness(10);
+    filter:brightness(10);
+  }
+  100%{
+    animation-timing-function:$ease-in-quint;
+    transform:scale(0.000,0.0001) translate3d(0,0,0);
+    -webkit-filter:brightness(50);
+    filter:brightness(50);
+  }
+}
+.screen{
+  width:100%;
+  height:100%;
+  border:none;
+}
+.chBox~.screen{
+  animation: turn-on 4s linear;
+  animation-fill-mode:forwards;
+}
+
+.chBox:checked~.screen{
+  animation: turn-off 0.55s $ease-out-quint;
+  animation-fill-mode:forwards;
+}
