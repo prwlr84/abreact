@@ -21,21 +21,33 @@ class About extends Component {
         document.location.href = '/connect';
         break;
         case document.querySelector('.button0'):
+        document.querySelector('.chBox').click()
+        await new Promise(r => setTimeout(r, 1000));
         document.location.href = '/';
         break;
         case document.querySelector('.button2'):
+        document.querySelector('.chBox').click()
+        await new Promise(r => setTimeout(r, 1000));
         document.location.href = '/work';
         break;
         case document.querySelector('.button3'):
+        document.querySelector('.chBox').click()
+        await new Promise(r => setTimeout(r, 1000));
         document.location.href = '/connect';
         break;
         case document.querySelector('.button0-mob'):
+        document.querySelector('.chBox').click()
+        await new Promise(r => setTimeout(r, 1000));
         document.location.href = '/';
         break;
         case document.querySelector('.button2-mob'):
+        document.querySelector('.chBox').click()
+        await new Promise(r => setTimeout(r, 1000));
         document.location.href = '/work';
         break;
         case document.querySelector('.button3-mob'):
+        document.querySelector('.chBox').click()
+        await new Promise(r => setTimeout(r, 1000));
         document.location.href = '/connect';
         break;
       default:
@@ -74,7 +86,7 @@ class About extends Component {
       <div>
         <input className="chBox" type="checkbox"  style={{display: 'none'}}/>
         <div className="app screen">
-        <h1 className="about-title">About</h1>
+        <h1 className="title">About</h1>
         <div className="about row">
             <div className="about1">
               <div className="about-text1">
