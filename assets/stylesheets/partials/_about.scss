@@ -81,6 +81,18 @@ div.about {
   position: absolute;
   width: 90%;
 
+  h4{
+    font-size: 20px;
+  }
+
+  video {
+    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 5s; /* Firefox < 16 */
+      -ms-animation: fadein 5s; /* Internet Explorer */
+       -o-animation: fadein 5s; /* Opera < 12.1 */
+          animation: fadein 5s;
+  }
+
   div.frame1{
     width: fit-content;
     margin: 20px;
@@ -108,8 +120,42 @@ div.about {
     border-radius: 2px;
     overflow: visible;
     position: relative;
+
   }
 }
+
+ @keyframes fadein {
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+    @-moz-keyframes fadein { /* Firefox */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+    @-webkit-keyframes fadein { /* Safari and Chrome */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+    @-o-keyframes fadein { /* Opera */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
 
   @media only screen and (min-width: 576px){
     h2.button0-mob, h2.button2-mob, h2.button3-mob{
@@ -152,7 +198,8 @@ div.about {
         position: absolute;
         right: 12%;
         top: 20%;
-        max-width: 35vw;
+        max-width: 37vw;
+        z-index: 5;
       }
 
       h2 {
@@ -181,7 +228,7 @@ div.about {
         position: absolute;
         left: 30%;
         top: 40%;
-        max-width: 35vw;
+        max-width: 40vw;
         z-index: 5;
       }
     }
@@ -214,7 +261,7 @@ div.about {
         position: relative;
         left: 12%;
         top: 15%;
-        max-width: 35vw;
+        max-width: 40vw;
         z-index: 5;
       }
     }
@@ -312,6 +359,9 @@ div.about {
     }
 }
 
+div.blk {
+  background-color: black;
+}
 
 /* Glitch styles */
 .glitchH {
@@ -319,6 +369,11 @@ div.about {
   top: 0;
   left: 0;
   overflow: hidden;
+  -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 5s; /* Firefox < 16 */
+      -ms-animation: fadein 5s; /* Internet Explorer */
+       -o-animation: fadein 5s; /* Opera < 12.1 */
+          animation: fadein 5s;
 }
 
 .glitchL {
@@ -326,6 +381,11 @@ div.about {
   top: 0;
   left: 0;
   overflow: hidden;
+ -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadein 5s; /* Firefox < 16 */
+    -ms-animation: fadein 5s; /* Internet Explorer */
+     -o-animation: fadein 5s; /* Opera < 12.1 */
+        animation: fadein 5s;
 }
 
 .glitch-img1 {

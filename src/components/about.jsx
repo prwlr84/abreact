@@ -3,8 +3,23 @@ import Typed from 'typed.js';
 
 class About extends Component {
   componentDidMount(){
-    window.addEventListener('click', e => {
-      switch(e.target){
+    async function redirect(keycode){
+      switch(keycode){
+        case 48:
+        document.querySelector('.chBox').click();
+        await new Promise(r => setTimeout(r, 1000));
+        document.location.href = '/';
+        break;
+        case 50:
+        document.querySelector('.chBox').click()
+        await new Promise(r => setTimeout(r, 1000));
+        document.location.href = '/work';
+        break;
+        case 51:
+        document.querySelector('.chBox').click()
+        await new Promise(r => setTimeout(r, 1000));
+        document.location.href = '/connect';
+        break;
         case document.querySelector('.button0'):
         document.location.href = '/';
         break;
@@ -26,7 +41,11 @@ class About extends Component {
       default:
         return null;
       }
-    });
+    }
+
+    window.addEventListener("keydown", e => {redirect(e.keyCode), false});
+
+    window.addEventListener('click', e => {redirect(e.target), false});
 
     function sleep(ms) {
       return new Promise(resolve => setTimeout(resolve, ms));
@@ -52,87 +71,100 @@ class About extends Component {
 
   render(){
     return(
-      <div className="app">
+      <div>
+        <input className="chBox" type="checkbox"  style={{display: 'none'}}/>
+        <div className="app screen">
         <h1 className="about-title">About</h1>
         <div className="about row">
             <div className="about1">
               <div className="about-text1">
                 <h2>Hi there!</h2>
                 <h3>My name is Antal Bako</h3>
-                <h4>I have been communicating with humans for living for more than 10 years, now let's try with computers!<br/>
+                <h4>I have been communicating with humans as a profession for more than 10 years, let's try with computers too!<br/>
                   After more than a decade in sales, felt time for a change.<br/>
                   I have decided to return my old passion and successfully completed Le Wagon's Web Development bootcamp in Amsterdam. I had great fun with all the challenges, but the camp is over and I'm always up for new ones!<br/>
                   Looking for new opportunities in Web Development, with experience in React JS, Ruby on Rails, AJAX, relational and non-relational databases and more. Absolutely open for new languages with excellent capacity to retain new things.
                 </h4>
               </div>
               <div className="frame3">
-                <div className="glitchL">
-                  <div className="glitch-img5"></div>
-                  <div className="glitch-img5"></div>
-                  <div className="glitch-img5"></div>
-                  <div className="glitch-img5"></div>
-                  <div className="glitch-img5"></div>
+                <div className="blk">
+                  <div className="glitchL">
+                    <div className="glitch-img5"></div>
+                    <div className="glitch-img5"></div>
+                    <div className="glitch-img5"></div>
+                    <div className="glitch-img5"></div>
+                    <div className="glitch-img5"></div>
+                  </div>
                 </div>
               </div>
               <div className="frame3">
-                <div className="glitchH">
-                  <div className="glitch-img6"></div>
-                  <div className="glitch-img6"></div>
-                  <div className="glitch-img6"></div>
-                  <div className="glitch-img6"></div>
-                  <div className="glitch-img6"></div>
+                <div className="blk">
+                  <div className="glitchH">
+                    <div className="glitch-img6"></div>
+                    <div className="glitch-img6"></div>
+                    <div className="glitch-img6"></div>
+                    <div className="glitch-img6"></div>
+                    <div className="glitch-img6"></div>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="about2">
               <div className="frame3">
-                <div className="glitchL">
-                  <div className="glitch-img3"></div>
-                  <div className="glitch-img3"></div>
-                  <div className="glitch-img3"></div>
-                  <div className="glitch-img3"></div>
-                  <div className="glitch-img3"></div>
+                <div className="blk">
+                  <div className="glitchL">
+                    <div className="glitch-img3"></div>
+                    <div className="glitch-img3"></div>
+                    <div className="glitch-img3"></div>
+                    <div className="glitch-img3"></div>
+                    <div className="glitch-img3"></div>
+                  </div>
                 </div>
               </div>
               <div className="frame3">
-                <div className="glitchL">
-                  <div className="glitch-img4"></div>
-                  <div className="glitch-img4"></div>
-                  <div className="glitch-img4"></div>
-                  <div className="glitch-img4"></div>
-                  <div className="glitch-img4"></div>
+                <div className="blk">
+                  <div className="glitchL">
+                    <div className="glitch-img4"></div>
+                    <div className="glitch-img4"></div>
+                    <div className="glitch-img4"></div>
+                    <div className="glitch-img4"></div>
+                    <div className="glitch-img4"></div>
+                  </div>
                 </div>
               </div>
               <div className="about-text2">
-                <h4>I was born in a town in the middle of the Hungarian lowlands, then I moved to Budapest for my studies and I lived there for 10 years.<br/> Next stop was the evenly
-                flat Amsterdam and currently moved to Spain to try a bit more "elevated" lifestyle in the mountains.</h4>
+                <h4>I was born in a town in the middle of the Hungarian lowlands, then when I was 18 I moved to Budapest for my studies and I lived there for 10 years.<br/> Next stop was the evenly
+                flat Amsterdam for almost 10 another years and currently moved to Spain to try a bit more "elevated" lifestyle in the mountains.</h4>
               </div>
             </div>
             <div className="about3">
               <div className="about-text3">
                 <h4>In my free time I love to pedal, flat like Holland or hills like in Andalucia, doesn't matter.<br/>
-                  Love movies a lot, Netflix is gettig boring...<br/>
-                  And music! Everything from classics through jazz to electronic music, but no mainstream please!</h4>
+                  Like to watch movies a lot, Netflix is gettig boring... :D<br/>
+                  And music! Everything from classics through jazz to electronic music, but no mainstream please!!!</h4>
               </div>
               <div className="frame3">
-                <div className="glitchH">
-                  <div className="glitch-img1"></div>
-                  <div className="glitch-img1"></div>
-                  <div className="glitch-img1"></div>
-                  <div className="glitch-img1"></div>
-                  <div className="glitch-img1"></div>
+                <div className="blk">
+                  <div className="glitchH">
+                    <div className="glitch-img1"></div>
+                    <div className="glitch-img1"></div>
+                    <div className="glitch-img1"></div>
+                    <div className="glitch-img1"></div>
+                    <div className="glitch-img1"></div>
+                  </div>
                 </div>
               </div>
               <div className="frame3">
-                <div className="glitchL">
-                  <div className="glitch-img2"></div>
-                  <div className="glitch-img2"></div>
-                  <div className="glitch-img2"></div>
-                  <div className="glitch-img2"></div>
-                  <div className="glitch-img2"></div>
+                <div className="blk">
+                  <div className="glitchL">
+                    <div className="glitch-img2"></div>
+                    <div className="glitch-img2"></div>
+                    <div className="glitch-img2"></div>
+                    <div className="glitch-img2"></div>
+                    <div className="glitch-img2"></div>
+                  </div>
                 </div>
               </div>
-              <div className="frame3"><video autoPlay loop src="https://res.cloudinary.com/prwlr84/video/upload/v1615825455/vlc-record-2021-03-15-17h07m54s-GOPR0685.MP4-_convert-video-online.com_1_kd3qwx.mp4" alt="Mountain bike ride" /></div>
             </div>
         </div>
           <h2 className='button0'>0</h2>
@@ -141,8 +173,8 @@ class About extends Component {
           <h2 className='button0-mob'>0|HOME</h2>
           <h2 className='button2-mob'>2|WORK</h2>
           <h2 className='button3-mob'>3|CONNECT</h2>
-      </div>
-    )
+        </div>
+      </div>)
   }
 }
 
