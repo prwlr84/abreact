@@ -59,6 +59,11 @@ div.main {
   margin: auto 1px;
   width: inherit;
 
+  h1>p.hand>span {
+    font-family: 'Mrs Saint Delafield', cursive;
+    font-size: 52px;
+  }
+
   input{
     background-color: black;
     color: red;
