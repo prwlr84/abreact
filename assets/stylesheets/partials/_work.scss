@@ -7,6 +7,46 @@ div.app{
   }
 }
 
+div.work{
+  margin: 10% auto;
+  display: flex;
+  flex-direction: column;
+  font-family: "Orbitron", sans-sherif;
+  color: red;
+  background-color: black;
+  overflow: hidden;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 90%;
+  align-items: center;
+
+  div.frame3:hover{
+    position: relative;
+    z-index: 5;
+    transform: scale(1.5);
+    img{
+      -webkit-filter: none;
+      filter: none;
+    }
+
+    h3, p {
+      display: block;
+    }
+  }
+
+  h3, p {
+    display: none;
+    transition: all .35s ease-in-out;
+  }
+
+  img{
+    max-width: 45vh;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    transition: all .35s ease-in-out;
+  }
+}
+
 @media only screen and (max-width: 575px) {
   h2.button1 {
     display: none;
@@ -18,3 +58,4 @@ div.app{
     display: none;
   }
 }
+
