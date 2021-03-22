@@ -89,9 +89,6 @@ class Work extends Component {
           <h1 className="title">Work</h1>
           <div className="work row">
             <div className="col-sm-6">
-              <h2>Welcome to my work page</h2>
-            </div>
-            <div className="col-sm-6">
               <div className="frame3">
                 <img src="https://res.cloudinary.com/prwlr84/image/upload/v1616411827/Opera_Snapshot_2021-03-22_120044_www.redu.co_ytaiqj.png" alt="" />
                 <h3>REDU.CO</h3>
@@ -117,8 +114,11 @@ class Work extends Component {
                 <h3>GARAGE APP</h3>
                 <p>----</p>
               </div>
-                        </div>
             </div>
+            <div className="col-sm-6">
+              <h2>Welcome to my work page</h2>
+            </div>
+          </div>
           <h2 className='button0'>0</h2>
           <h2 className='button1'>1</h2>
           <h2 className='button3'>3</h2>
