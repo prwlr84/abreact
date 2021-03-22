@@ -9,7 +9,6 @@ div.app{
 
 div.work{
   margin: 10% auto;
-  display: flex;
   flex-direction: column;
   font-family: "Orbitron", sans-sherif;
   color: red;
@@ -19,6 +18,16 @@ div.work{
   position: absolute;
   width: 90%;
   align-items: center;
+
+  div.frame3{
+    margin: 0 auto;
+    width: fit
+  }
+
+  div.col-sm-4:nth-of-type(1){
+    max-width: 75vh;
+    overflow-y: scroll;
+  }
 
   div.frame3:hover{
     position: relative;
