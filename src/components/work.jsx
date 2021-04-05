@@ -164,28 +164,3 @@ class Work extends Component {
 
 export default Work;
 
-{/*<div className="frame3">
-          <img src="https://res.cloudinary.com/prwlr84/image/upload/v1616411827/Opera_Snapshot_2021-03-22_120044_www.redu.co_ytaiqj.png" alt="" />
-          <h3>REDU.CO</h3>
-          <p>redu.co</p>
-        </div>
-        <div className="frame3">
-          <img src="https://res.cloudinary.com/prwlr84/image/upload/v1616411827/Opera_Snapshot_2021-03-22_120650_mundo-coche.com_mdp64d.png" alt="" />
-          <h3>MUNDO COCHE</h3>
-          <p>mundo-coche.com</p>
-        </div>
-        <div className="frame3">
-          <img src="https://res.cloudinary.com/prwlr84/image/upload/v1616411827/Opera_Snapshot_2021-03-22_120145_rent-a-skill.herokuapp.com_heitum.png" alt="" />
-          <h3>RENT-A-SKILL</h3>
-          <p>rent-a-skill.herokuapp.com</p>
-        </div>
-        <div className="frame3">
-          <img src="https://res.cloudinary.com/prwlr84/image/upload/v1616411827/Opera_Snapshot_2021-03-22_120520_chat-ab-rrr.herokuapp.com_bgk8qi.png" alt="" />
-          <h3>CHAT APP</h3>
-          <p>chat-ab-rrr.herokuapp.com</p>
-        </div>
-        <div className="frame3">
-          <img src="https://res.cloudinary.com/prwlr84/image/upload/v1616411827/Opera_Snapshot_2021-03-22_121453_localhost_wc9kng.png" alt="" />
-          <h3>GARAGE APP</h3>
-          <p>rwe-garage.herokuapp.com</p>
-        </div>*/}
