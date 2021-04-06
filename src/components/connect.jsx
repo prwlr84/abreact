@@ -99,7 +99,22 @@ class Connect extends Component {
           <h1 className="title">Connect</h1>
           <div className="connect row">
             <div className="col-sm-6">
-              <h1>Have a look around!</h1>
+              <h2 className="conh2">Wanna reach out? Send me an e-mail!</h2>
+              <form action="">
+                <div className="frame3"><input type="text" placeholder="Name"/></div>
+                <div className="frame3"><input type="email" placeholder="E-mail"/></div>
+                <div className="frame3"><input type="text" placeholder="Subject"/></div>
+                <div className="frame3"><textarea placeholder="Here comes the message"/></div>
+                <div className="frame3"><input type="submit"/></div>
+              </form>
+              <div className="social">
+                <h2 className="conh2">Or find me on the usual platforms:</h2>
+                <div>
+                  <i className="fab fa-github fa-3x icon"></i>
+                  <i className="fab fa-linkedin fa-3x icon"></i>
+                  <i className="fab fa-strava fa-3x icon"></i>
+                </div>
+              </div>
             </div>
           </div>
           <h2 className='button0'>0</h2>
