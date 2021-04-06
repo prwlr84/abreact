@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Typed from 'typed.js';
 import { setLang } from '../actions';
 import Menu from './menu';
+import game from './game';
 
 class Main extends Component {
 
@@ -52,12 +53,24 @@ class Main extends Component {
     window.addEventListener('click', e => {redirect(e.target), false });
 
     this.props.setLang(this.props.ip);
+
+    setTimeout(()=>{document.querySelector('.x').addEventListener('mouseover', () => {document.querySelector('.x').style.opacity = '0.5'})}, 10000);
+    setTimeout(()=>{document.querySelector('.x').addEventListener('mouseout', () => {document.querySelector('.x').style.opacity = '1'})}, 10000);
+    setTimeout(()=>{document.querySelector('.x').addEventListener('click', () => {document.querySelector('.egg').style.display = 'flex'})}, 10000);
   }
 
   render() {
     return (
       <div><input className="chBox" type="checkbox"  style={{display: 'none'}}/>
         <div className="app row screen">
+          <div className="egg">
+            <h5>Whack-the-stack</h5>
+            <h6>Time: 60s</h6>
+            <h6>Point:0</h6>
+            <img className="eeLogo logo1"src="" alt="" />
+            <img className="eeLogo logo2"src="" alt="" />
+            <img className="eeLogo logo3"src="" alt="" />
+          </div>
           <div className="main col-12 col-sm-6">
             { this.props.lang ? <Menu /> : <h1>Loading...</h1> }
           </div>
