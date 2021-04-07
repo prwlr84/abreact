@@ -41,21 +41,53 @@ div.app {
 
 h1{
   font-family: "Orbitron", sans-sherif;
+
+  &:not(#typed):not(#workTitle):hover {
+      animation: icon3d 200ms infinite;
+  }
+  @keyframes icon3d {
+    0% {
+      text-shadow: 5px 4px rgba(0,0,0,1), -5px -6px rgba(255,255,255,1);
+    }
+    25% {
+      text-shadow: -5px -6px rgba(0,0,0,1), 5px 4px rgba(255,255,255,1);
+    }
+    50% {
+      text-shadow: 5px -4px rgba(0,0,0,1), -8px 4px rgba(255,255,255,1);
+    }
+    75% {
+      text-shadow: -8px -4px rgba(0,0,0,1), -5px -4px rgba(255,255,255,1);
+    }
+    100% {
+      text-shadow: -5px 0 rgba(0,0,0,1), 5px -4px rgba(255,255,255,1);
+    }
+  }
 }
 
 div.egg{
   display: none;
-  position: relative;
+  flex-direction: column;
+  position: absolute;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: transparent;
+  background-color: rgba(0,0,0,0.5);
   z-index: 5;
+
+  button{
+    max-width: 5vw;
+    background-color:black;
+    color:red;
+    border: 1px solid red;
+    outline: none;
+  }
 
   img.eeLogo{
     display: none;
+    max-width: 5vw;
     position: absolute;
+
   }
 }
 

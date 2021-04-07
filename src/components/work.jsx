@@ -146,7 +146,7 @@ class Work extends Component {
           <h1 className="title">Work</h1>
           <div className="work row">
             <div className="col-sm-6 order-sm-2">
-              <h1>Have a look around!</h1>
+              <h1 id='workTitle'>Have a look around!</h1>
             </div>
             {this.state.list ? this.list() : this.detail(this.state.current)}
           </div>

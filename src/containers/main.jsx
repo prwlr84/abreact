@@ -54,9 +54,9 @@ class Main extends Component {
 
     this.props.setLang(this.props.ip);
 
-    setTimeout(()=>{document.querySelector('.x').addEventListener('mouseover', () => {document.querySelector('.x').style.opacity = '0.5'})}, 10000);
-    setTimeout(()=>{document.querySelector('.x').addEventListener('mouseout', () => {document.querySelector('.x').style.opacity = '1'})}, 10000);
-    setTimeout(()=>{document.querySelector('.x').addEventListener('click', () => {document.querySelector('.egg').style.display = 'flex'})}, 10000);
+    setTimeout(()=>{document.querySelector('.x').addEventListener('mouseover', () => {document.querySelector('.x').style.opacity = '0.5'})}, 7000);
+    setTimeout(()=>{document.querySelector('.x').addEventListener('mouseout', () => {document.querySelector('.x').style.opacity = '1'})}, 7000);
+    setTimeout(()=>{document.querySelector('.x').addEventListener('click', game)}, 7000);
   }
 
   render() {
@@ -65,11 +65,12 @@ class Main extends Component {
         <div className="app row screen">
           <div className="egg">
             <h5>Whack-the-stack</h5>
-            <h6>Time: 60s</h6>
-            <h6>Point:0</h6>
-            <img className="eeLogo logo1"src="" alt="" />
-            <img className="eeLogo logo2"src="" alt="" />
-            <img className="eeLogo logo3"src="" alt="" />
+            <h6>Time: <span className="time">60</span>s</h6>
+            <h6>Points: <span className="score">0</span></h6>
+            <button>START</button>
+            <button>EXIT</button>
+            <img className="eeLogo logo1"src="https://res.cloudinary.com/prwlr84/image/upload/v1617774649/react_zvssgr.svg" alt="" />
+            <img className="eeLogo logo2"src="https://res.cloudinary.com/prwlr84/image/upload/v1617774649/rails_sr3jog.svg" alt="" />
           </div>
           <div className="main col-12 col-sm-6">
             { this.props.lang ? <Menu /> : <h1>Loading...</h1> }
