@@ -22,29 +22,36 @@ const game = () => {
       randLogo.style.display = 'flex';
       randLogo.style.left =`${randPosL}%`;
       randLogo.style.top = `${randPosT}%`;
-      randLogo.addEventListener('click', () => {scoreDisp.textContent = score + 1});
-      randLogo.addEventListener('click', () => {randLogo.style.display = 'none'});
       setTimeout(()=>{randLogo.style.display = 'none'}, randTime);
     }
 
-    var timer = function() {
-        var sixty = 60;
-        var loop = function() {
+    const timer = function() {
+        let sixty = 60;
+        const loop = function() {
+            console.log(timeDisp.textContent);
+            console.log(typeof(timeDisp.textContent));
+            parseInt(timeDisp.textContent) > 1 ? timeDisp.textContent = sixty : 0;
             sixty--;
-            innerFunc(sixty);
+            (logos[0].style.display === 'none' && logos[1].style.display === 'none') ? innerFunc(sixty) : sixty;
         };
-        var innerFunc = function(param) {
-          timeDisp.textContent = param;
-          (param >= 0) ? start() : null;
-          (param === 0) ? clearInterval(interval) : null;
+        const innerFunc = function(p) {
+          (p > 0) ? start() : null;
+          for (var i = logos.length - 1; i >= 0; i--) {
+            function writeScore(p){scoreDisp.textContent = p}
+            logos[i].addEventListener('click', () => {score++; writeScore(score)});
+          }
+          for (var i = logos.length - 1; i >= 0; i--) {
+            logos[i].addEventListener('click', () => {logos[i].style.display = 'none'});
+          }
+          (p <= 0) ? clearInterval(interval) : null;
         };
         let interval = setInterval(loop, 1000);
     };
 
     const myTimeIt = timer();
 
-    startB.addEventListener('click', () => {myTimeIt()});
-    exitB.addEventListener('click', ()=>{egg.style.display = 'none'; window.clearInterval(myTimeIt.interval);});
+    startB.addEventListener('click', () => {myTimeIt});
+    exitB.addEventListener('click', ()=>{egg.style.display = 'none'; window.clearInterval(timer.interval);});
 
 }
 
