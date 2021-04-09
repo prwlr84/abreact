@@ -56,7 +56,7 @@ class Main extends Component {
 
     setTimeout(()=>{document.querySelector('.x').addEventListener('mouseover', () => {document.querySelector('.x').style.opacity = '0.5'})}, 7000);
     setTimeout(()=>{document.querySelector('.x').addEventListener('mouseout', () => {document.querySelector('.x').style.opacity = '1'})}, 7000);
-    setTimeout(()=>{document.querySelector('.x').addEventListener('click', game)}, 7000);
+    setTimeout(()=>{document.querySelector('.x').addEventListener('click', game)}, 6000);
   }
 
   render() {
