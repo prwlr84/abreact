@@ -69,8 +69,8 @@ class Main extends Component {
             <h6>Points: <span className="score">0</span></h6>
             <button>START</button>
             <button>EXIT</button>
-            <img className="eeLogo logo1"src="https://res.cloudinary.com/prwlr84/image/upload/v1617774649/react_zvssgr.svg" alt="" />
-            <img className="eeLogo logo2"src="https://res.cloudinary.com/prwlr84/image/upload/v1617774649/rails_sr3jog.svg" alt="" />
+            <img className="eeLogo logo1"src="https://res.cloudinary.com/prwlr84/image/upload/v1617774649/react_zvssgr.svg" alt="" style={{display: 'none'}}/>
+            <img className="eeLogo logo2"src="https://res.cloudinary.com/prwlr84/image/upload/v1617774649/rails_sr3jog.svg" alt="" style={{display: 'none'}}/>
           </div>
           <div className="main col-12 col-sm-6">
             { this.props.lang ? <Menu /> : <h1>Loading...</h1> }
