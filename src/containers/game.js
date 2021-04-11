@@ -10,7 +10,7 @@ const game = (callback) => {
     let interval;
 
 
-    function init(){score = 0; scoreDisp.textContent = 0; timeDisp.textContent = 60; egg.style.display = 'flex';}
+    function init(){ score = 0; scoreDisp.textContent = 0; timeDisp.textContent = 60; egg.style.display = 'flex'; document.querySelector('h5').textContent = "WHACK-THE-STACK"};
     function inc(){score++; return score};
     function writeScore(x){scoreDisp.textContent = x};
     function hide(x){x.style.display = 'none'};
@@ -54,6 +54,8 @@ const game = (callback) => {
 
     startB.addEventListener('click', () => {init();timer()});
     exitB.addEventListener('click', ()=>{clearInterval(interval); hide(egg)});
+
+
 
 }
 
