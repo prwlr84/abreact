@@ -6,52 +6,53 @@ const game = () => {
     const exitB = document.querySelector('div.egg>button:nth-of-type(2)');
     const scoreDisp = document.querySelector('.score');
     const timeDisp = document.querySelector('.time');
-    let score = 0;
+    let score;
+    let interval;
 
 
+    function init(){score = 0; scoreDisp.textContent = 0; timeDisp.textContent = 60; egg.style.display = 'flex';}
+    function inc(){score++; return score};
+    function writeScore(x){scoreDisp.textContent = x};
+    function hide(x){x.style.display = 'none'};
+    logos.forEach(item => {item.addEventListener('click', () => {inc();writeScore(score); console.log(score)})});
 
-    scoreDisp.textContent = score;
-    timeDisp.textContent = 60;
-    egg.style.display = 'flex';
+    init();
 
     function start(){
-      const randLogo = logos[logos.length * Math.random() | 0];
-      const randTime = Math.floor(Math.random() * 3000) + 1000;
-      const randPosL = Math.floor(Math.random() * 100) + 10;
-      const randPosT = Math.floor(Math.random() * 100) + 10;
+      const randLogo = logos[Math.floor(logos.length * Math.random())];
+      const randTime = Math.floor(Math.random() * 2000) + 500;
+      const randPosL = Math.floor(Math.random() * 80) + 10;
+      const randPosT = Math.floor(Math.random() * 80) + 10;
       randLogo.style.display = 'flex';
       randLogo.style.left =`${randPosL}%`;
       randLogo.style.top = `${randPosT}%`;
-      setTimeout(()=>{randLogo.style.display = 'none'}, randTime);
+
+      function autohide(){randLogo.style.display = 'none'};
+      randLogo.addEventListener('click', () => {hide(randLogo)});
+
+
+      setTimeout(autohide, randTime);
     }
 
-    const timer = function() {
+    function timer(){
         let sixty = 60;
         const loop = function() {
-            console.log(timeDisp.textContent);
-            console.log(typeof(timeDisp.textContent));
-            parseInt(timeDisp.textContent) > 1 ? timeDisp.textContent = sixty : 0;
-            sixty--;
-            (logos[0].style.display === 'none' && logos[1].style.display === 'none') ? innerFunc(sixty) : sixty;
+          console.log(score);
+          parseInt(timeDisp.textContent) > 0 ? timeDisp.textContent = sixty : 0;
+          sixty--;
+          innerFunc(sixty);
         };
         const innerFunc = function(p) {
-          (p > 0) ? start() : null;
-          for (var i = logos.length - 1; i >= 0; i--) {
-            function writeScore(p){scoreDisp.textContent = p}
-            logos[i].addEventListener('click', () => {score++; writeScore(score)});
+          if(p < 0){
+            clearInterval(interval);
           }
-          for (var i = logos.length - 1; i >= 0; i--) {
-            logos[i].addEventListener('click', () => {logos[i].style.display = 'none'});
-          }
-          (p <= 0) ? clearInterval(interval) : null;
-        };
-        let interval = setInterval(loop, 1000);
+          (logos[0].style.display === 'none' && logos[1].style.display === 'none') ? start() : null;
+        }
+        interval = setInterval(loop, 1000);
     };
 
-    const myTimeIt = timer();
-
-    startB.addEventListener('click', () => {myTimeIt});
-    exitB.addEventListener('click', ()=>{egg.style.display = 'none'; window.clearInterval(timer.interval);});
+    startB.addEventListener('click', () => {init();timer()});
+    exitB.addEventListener('click', ()=>{clearInterval(interval); hide(egg)});
 
 }
 
