@@ -1,4 +1,4 @@
-const game = () => {
+const game = (callback) => {
     const x = document.querySelector('.x');
     const egg = document.querySelector('.egg');
     const logos = [document.querySelector('.logo1'), document.querySelector('.logo2')]
@@ -45,6 +45,7 @@ const game = () => {
         const innerFunc = function(p) {
           if(p < 0){
             clearInterval(interval);
+            callback;
           }
           (logos[0].style.display === 'none' && logos[1].style.display === 'none') ? start() : null;
         }
