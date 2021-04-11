@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Typed from 'typed.js';
 import { setLang } from '../actions';
 import Menu from './menu';
+import Ranks from '../components/ranks';
 import game from './game';
 
 class Main extends Component {
@@ -54,9 +55,11 @@ class Main extends Component {
 
     this.props.setLang(this.props.ip);
 
-    setTimeout(()=>{document.querySelector('.x').addEventListener('mouseover', () => {document.querySelector('.x').style.opacity = '0.5'})}, 7000);
-    setTimeout(()=>{document.querySelector('.x').addEventListener('mouseout', () => {document.querySelector('.x').style.opacity = '1'})}, 7000);
-    setTimeout(()=>{document.querySelector('.x').addEventListener('click', game)}, 6000);
+
+
+    setTimeout(()=>{document.querySelector('.x').addEventListener('mouseover', () => {document.querySelector('.x').style.opacity = '0.5'})}, 6000);
+    setTimeout(()=>{document.querySelector('.x').addEventListener('mouseout', () => {document.querySelector('.x').style.opacity = '1'})}, 6000);
+    setTimeout(()=>{document.querySelector('.x').addEventListener('click', ()=>{game()})}, 6000);
   }
 
   render() {
@@ -64,9 +67,10 @@ class Main extends Component {
       <div><input className="chBox" type="checkbox"  style={{display: 'none'}}/>
         <div className="app row screen">
           <div className="egg">
-            <h5>Whack-the-stack</h5>
-            <h6>Time: <span className="time">60</span>s</h6>
-            <h6>Points: <span className="score">0</span></h6>
+            <h5></h5>
+            <Ranks />
+            <h6>Time: <span className="time"></span>s</h6>
+            <h6>Points: <span className="score"></span></h6>
             <button>START</button>
             <button>EXIT</button>
             <img className="eeLogo logo1"src="https://res.cloudinary.com/prwlr84/image/upload/v1617774649/react_zvssgr.svg" alt="" style={{display: 'none'}}/>
