@@ -1,4 +1,4 @@
-const game = () => {
+const game = (callback) => {
     const x = document.querySelector('.x');
     const egg = document.querySelector('.egg');
     const logos = [document.querySelector('.logo1'), document.querySelector('.logo2')]
@@ -10,7 +10,7 @@ const game = () => {
     let interval;
 
 
-    function init(){score = 0; scoreDisp.textContent = 0; timeDisp.textContent = 60; egg.style.display = 'flex';}
+    function init(){ score = 0; scoreDisp.textContent = 0; timeDisp.textContent = 60; egg.style.display = 'flex'; document.querySelector('h5').textContent = "WHACK-THE-STACK"};
     function inc(){score++; return score};
     function writeScore(x){scoreDisp.textContent = x};
     function hide(x){x.style.display = 'none'};
@@ -45,6 +45,7 @@ const game = () => {
         const innerFunc = function(p) {
           if(p < 0){
             clearInterval(interval);
+
           }
           (logos[0].style.display === 'none' && logos[1].style.display === 'none') ? start() : null;
         }
@@ -53,6 +54,8 @@ const game = () => {
 
     startB.addEventListener('click', () => {init();timer()});
     exitB.addEventListener('click', ()=>{clearInterval(interval); hide(egg)});
+
+
 
 }
 
