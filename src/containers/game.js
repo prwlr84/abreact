@@ -1,4 +1,4 @@
-const game = () => {
+const game = (callback) => {
     const x = document.querySelector('.x');
     const egg = document.querySelector('.egg');
     const logos = [document.querySelector('.logo1'), document.querySelector('.logo2')]
@@ -14,7 +14,7 @@ const game = () => {
     function inc(){score++; return score};
     function writeScore(x){scoreDisp.textContent = x};
     function hide(x){x.style.display = 'none'};
-    logos.forEach(item => {item.addEventListener('click', () => {inc();writeScore(score); console.log(score)})});
+    logos.forEach(item => {item.addEventListener('click', () => {inc();writeScore(score);})});
 
     init();
 
@@ -40,12 +40,12 @@ const game = () => {
           console.log(score);
           parseInt(timeDisp.textContent) > 0 ? timeDisp.textContent = sixty : 0;
           sixty--;
-          innerFunc(sixty);
+          innerFunc(sixty,score);
         };
-        const innerFunc = function(p) {
-          if(p < 0){
+        const innerFunc = function(t,s) {
+          if(t < 0){
             clearInterval(interval);
-            document.querySelector('div.ranks').style.display = 'flex';
+            callback(score);
           }
           (logos[0].style.display === 'none' && logos[1].style.display === 'none') ? start() : null;
         }
