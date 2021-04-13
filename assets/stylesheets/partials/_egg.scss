@@ -7,10 +7,12 @@ div.egg{
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.9);
   z-index: 5;
 
-
+h5, h6 {
+  max-width: 10%;
+}
 
   button{
     max-width: 5vw;
@@ -28,10 +30,17 @@ div.egg{
 
   div.ranks{
     margin: 0 auto;
-    padding: 10%;
+    padding: 6%;
     background-color: rgba(255,0,0,0.3);
     flex-direction: column;
     justify-content: center;
+    text-align: center;
+    min-height: auto;
+  }
+
+  h3{
+    margin: 0 auto;
+
   }
 
   ul{
@@ -39,7 +48,8 @@ div.egg{
     display: contents;
 
     li{
-      display: inline-flex;
+      display: flex;
+      justify-content: space-between;
     }
 
     p{
