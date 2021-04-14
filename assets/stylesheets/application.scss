@@ -43,7 +43,7 @@ div.app {
 h1{
   font-family: "Orbitron", sans-sherif;
 
-  &:not(#typed):not(#workTitle):hover {
+  &:not(#typed):not(#workTitle):not(#ranksTitle):hover {
       animation: icon3d 200ms infinite;
   }
   @keyframes icon3d {
